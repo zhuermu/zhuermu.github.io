@@ -1,46 +1,106 @@
 ---
 layout: page
-title: Hello World!
-tagline: Supporting tagline
+title: Ernest's blog
+tagline: 追求自由的码砖人 
 ---
 {% include JB/setup %}
 
-Read [Jekyll Quick Start](http://jekyllbootstrap.com/usage/jekyll-quick-start.html)
+## 个人信息
 
-Complete usage and documentation available at: [Jekyll Bootstrap](http://jekyllbootstrap.com)
+- 黎小为/男
+- 本科/邵阳学院/网络工程 
+- 2012年开始工作
+- 博客： http://blog.zhuermu.com, https://blog.csdn.net/zhu2mu
+- 手机：186****3091/ 
+- 邮箱：258513813@qq.com
+- 期望城市：广州/深圳
 
-## Update Author Attributes
+---
 
-In `_config.yml` remember to specify your own data:
-    
-    title : My Blog =)
-    
-    author :
-      name : Name Lastname
-      email : blah@email.test
-      github : username
-      twitter : username
+## 工作经历
 
-The theme should reference these variables whenever needed.
-    
-## Sample Posts
+### 中国平安陆金所 (2019/6 ~ 至今)
 
-This blog contains sample posts which help stage pages and blog data.
-When you don't need the samples anymore just delete the `_posts/core-samples` folder.
+#### LFS-文件存储服务
 
-    $ rm -rf _posts/core-samples
+LFS(lufax file system)是陆金所内部文件存储服务，对内部应用提供简单、高可用、可拓展的统一文件存储系统
 
-Here's a sample "posts list".
+- 负责该系统的技术支持
 
-<ul class="posts">
-  {% for post in site.posts %}
-    <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></li>
-  {% endfor %}
-</ul>
+#### 架构管控平台
 
-## To-Do
+架构管控平台是内部DevOpts工具，对接配置中心、调度中心、消息队列等中间件以及内部其他系统，提供给开发、测试、运维、db等角色查看、监控、修改不同环境数据
 
-This theme is still unfinished. If you'd like to be added as a contributor, [please fork](http://github.com/plusjade/jekyll-bootstrap)!
-We need to clean up the themes, make theme usage guides with theme-specific markup examples.
+- 负责架构管控平台需求和开发维护
+- 负责解决开发团队使用平台遇到的问题
+
+### 网易游戏 (2014/8 ~ 2019/6)
+
+#### 我的世界中国版-minecraft
+
+Minecraft是一款风靡全球的沙盒游戏，15年开始网易与微软合作开始中国版开发工作，17年上线至今该游戏当前注册用户突破2亿。工作内容:
+
+- 承担服务端日常功能开发工作和维护
+- 负责开发者体平台系统开发和维护
+
+#### 微信公众平台
+
+基于微信公众平台，解决各游戏产品的营销需求，提供各种标准化服务和应用插件，以便快速开发和上线各种类型的公众号插件和小程序。该项目使用spring mvc/boot 构建多系统，系统之间通信使用dubbo+zookeeper，nginx做负载均衡，使用redis作为分布式缓存，mysql数据存储数据。工作内容:
+
+- 负责项目系统核心编码以及技术架构
+- 负责项目风险预估、进度控制、资源协调、沟通管理等
+
+#### 官网内容发布系统
+
+该系统提供游戏官网站点建设、新闻编辑、审核、发布、上下线等功能。SpringMVC实现，nginx+tomcat多实例部署，工程使用ant作为构建工具。工作内容:
+
+- 负责该项目前期需求调研、数据兼容、模型设计等
+- 负责该项目内容发布管理、模板管理、页面管理等模块的具体开发
+
+### 京东(2012/4~2014/7)
+
+#### 智能投放系统(SEM)
+
+SEM 即Search Engine Marketing的缩写,中文意思是搜索引擎营销。该系统管理京东近数百万的关键词在搜索引擎投放。项目框架使用SpringMVC，系统之间使用activityMQ解耦，使用redis作为分布式缓存，nginx+tomcat多实例部署。工作内容:
+
+- 负责整个爬虫子项目的设计、部署、开发
+- 负责SEM项目智能投放排名锁定\竞争分析模块设计、开发
+
+#### 舆情系统
+
+该系统收集网络热门门户网站新闻、热门微博、热门论坛的数据抓取、并进行数据加工、分类、整理，提取当中有价值的数据。框架使用Spring+struts2+mybatis，系统之间使用MQ解耦，使用redis作为分布式缓存，nginx+tomcat多实例部署。工作内容:
+
+- 为舆情项目的舆情信息提供数据支持部分的开发
+- 负责舆情预警模块的代码开发
+
+#### 比价抓取平台-分布式爬虫系统
+
+该项目是京东内部比价项目的数据抓取平台，该项目负责实时爬取对手网站的商品信息。框架使用Spring+struts2+mybatis，使用JAX-RS（RESTful Web service）作为爬虫节点与调度端的通信协议，MQ作为数据抓取结果的订阅队列，爬虫节点分布式部署。工作内容：
+
+- 参与比价抓取平台2期开发和网站数据抓取
+- 负责爬虫项目的日常维护工作
+
+## 技能清单
+
+按熟悉程度排序
+
+- 编程语言：Java/PHP/python/c/c++/go
+- Web框架：Spring MVC/Spring boot/flask
+- 存储相关：MySQL/Redis/MongDB/Elasticsearch
+- 版本管理：Svn/Git
+- 操作系统：windows/linux
+- 项目管理：PMP证书
+
+## 在职业专利（时间先后）
+
+| 专利名称                     | 公开号/专利号      | 作者顺序 |
+| ------------------------ | ------------ | ---- |
+| 一种关键词热度自动控制方法            | 201310524337 | 1    |
+| 网页爬虫抓取规则替换方法、调度端和抓取端     | 201310471399 | 2    |
+| 一种基于关键词检索的网络爬虫调度方法及系统    | 201410011079 | 2    |
+| 一种网络爬虫去重特征值的提取方法         | 201410231745 | 1    |
+| 图片的大小超标检测方法及装置、检测服务器     | 201710440381 | 1    |
+| 生成游戏预约消息的方法、装置和终端        | 108632387A   | 1    |
+| 一种基于即时通讯公众平台的消息处理方法和相关设备 | 109189502A   | 1    |
 
 
