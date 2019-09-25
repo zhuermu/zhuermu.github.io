@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Ernest's blog
-tagline: 追求自由的码砖人 
+title: 个人简历
+tagline: 追求自由的码砖人
 ---
 {% include JB/setup %}
 
