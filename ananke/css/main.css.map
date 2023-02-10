@@ -1,7 +1,7 @@
 {
 	"version": 3,
 	"file": "main.css",
-	"sourceRoot": "/home/runner/work/zhuermu.github.io/zhuermu.github.io",
+	"sourceRoot": "/Users/ernestxwli/data/workspace/github.com/zhuermu.github.io",
 	"sources": [
 		"ananke/css/main.css"
 	],
