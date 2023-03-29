@@ -1,0 +1,4 @@
+baseURL = 'https://zhuermu.github.io'
+languageCode = 'en-us'
+title = '二木的博客'
+theme = 'ananke'

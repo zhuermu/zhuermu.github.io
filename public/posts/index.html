@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>二木的博客</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="">
+    <meta name="generator" content="Hugo 0.110.0">
+    
+    
+    
+    
+      <meta name="robots" content="noindex, nofollow">
+    
+
+    
+<link rel="stylesheet" href="/ananke/css/main.min.css" >
+
+
+
+    
+    
+    
+      
+
+    
+
+    
+    
+      <link href="/posts/index.xml" rel="alternate" type="application/rss+xml" title="二木的博客" />
+      <link href="/posts/index.xml" rel="feed" type="application/rss+xml" title="二木的博客" />
+      
+    
+    
+    <meta property="og:title" content="Posts" />
+<meta property="og:description" content="" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://zhuermu.github.io/posts/" />
+<meta itemprop="name" content="Posts">
+<meta itemprop="description" content=""><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Posts"/>
+<meta name="twitter:description" content=""/>
+
+	
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+
+  <header>
+    <div class="pb3-m pb6-l bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="/" class="f3 fw2 hover-white no-underline white-90 dib">
+      
+        二木的博客
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+      
+<div class="ananke-socials">
+  
+</div>
+
+    </div>
+  </div>
+</nav>
+
+      <div class="tc-l pv3 ph3 ph4-ns">
+        <h1 class="f2 f-subheadline-l fw2 light-silver mb0 lh-title">
+          Posts
+        </h1>
+        
+      </div>
+    </div>
+  </header>
+
+
+    <main class="pb7" role="main">
+      
+  <article class="pa3 pa4-ns nested-copy-line-height">
+    <section class="cf ph3 ph5-l pv3 pv4-l f4 tc-l center measure-wide lh-copy mid-gray"></section>
+    <section class="flex-ns flex-wrap justify-around mt5">
+      
+        <div class="relative w-100 w-30-l mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/posts/2023-02-10-http-router-transfer/" class="link black dim">
+        HTTP协议路由转发小结
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      hosts指向里约网关IP，但最终访问到应用了 问题介绍：个人电脑 hosts 文件配置如下：
+xx.xx.xx.243 xxx.domain.com
+其中 xx.xx.xx.243 是里约网关的服务器ip，而应用部署在 xx.xx.xx.93 上，但最终请求为何会转发到93这台服务器上呢？
+原因是里约网关配置了转发规则，当网关接收到的请求host是 xxx.domain.com 时，就将请求转发到 93 这台服务器上。这种就是典型的HTTP(7层)转发规则，对应的有TCP(4层)转发，感兴趣的可以了解对比下。那网关是如何转发请求的呢？
+先从HTTP协议说起 就以我们政务开放平台系统为例说明，上述条件依旧成立即：里约部署在243服务器上，开放平台部署在93上，我本地开发机配置hosts:
+xx.xx.xx.243 xxx.domain.com
+浏览器访问 http://xxx1.domain.com/api/corp/personal/user_info，我们先用Wireshark抓包看下http请求(注意抓包时，选择wifi网卡，设置条件 http &amp;&amp; ip.addr == xx.xx.xx.243过滤）。下面是我的抓包内容。
+GET /api/corp/personal/user_info HTTP/1.1 #请求方法 PATH路径 http版本号 Host: xxx.domain.com Connection: keep-alive Cache-Control: max-age=0 Upgrade-Insecure-Requests: 1 User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36 Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng;q=0.8,application/signed-exchange;v=b3;q=0.9 Accept-Encoding: gzip, deflate Accept-Language: en,zh-CN;q=0.9,zh;q=0.8,zh-TW;q=0.7,und;q=0.6 HTTP/1.1 200 OK # 版本号 返回状态码 对应信息 x-proxy-by: Tif-accessgate Date: Fri, 04 Dec 2020 11:56:17 GMT Content-Type: application/json; charset=utf-8 Content-Length: 357 Connection: keep-alive Reqid: UMMIoNR7NfTQfCBeqY9E x-forwarded-for: 9.
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/posts/2019-09-24-record-a-production-accident/" class="link black dim">
+        一次cpu使用率低负载高的生产事故
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      Introduction 事故背景 昨天晚上半夜3：26分被电话铃声吵醒了，看到一个未接电话，然后看到微信里面同事拉了群，看到是我负责的一个服务分布式文件存储系统报警了， 报警信息是部署该服务的所有机器同时出现了load average,并且运维同事已经尝试重启应用来恢复负载过高问题，依然无效，重启应用之后服务器负载又马上飙山来。
+处理过程 由于我刚刚入职该公司，接手这个文件存储系统不到2个礼拜，而之前开发的人都离职了。这个系统非常重要，整个公司的所有的涉及到文件存储的应用都是接入该服务，一旦出现故障将会影响全站的服务，因此，必须在天亮前回复服务器压力，避免影响白天应用对外的服务。这个时候我感到一股前所未有的压力，我一下清醒了，考虑到在家里没有生产权限，只能和运维配置一起排查问题，我按时间顺序大概做了这么几件事：
+上监控系统查看是否又报错日志，排查系统报错导致的负载； 找运维查看jvm的gc日志，排查是否存在异常的gc； 找运维执行 jstack -l pid 查看应用是否存在异常的线程堆栈信息。 运维给出了top截图，看当前服务器资源使用和进程的情况 1~3 都正常，top命令看到 load average w1 w5 w15 都达到10以上，cpu只用了不到1%，看上去是一个cpu低，负载高的问题，因为程序既没有出错，运行状态看上去也正常感觉负载高可能不是应用本身造成。
+让运维看下磁盘容量：由于该系统是文件存储系统，因此我们怀疑下是否由于磁盘满了导致了负载过高呢？ 在运维执行 df -h 命令时一直卡住无法出结果，感觉可能和磁盘有关系，部署文件存储系统的服务器都挂载了NAS存储设备，于是开始联系负责NAS服务的运维，发现有个NAS服务挂掉了，重启NAS服务之后，重新挂载NAS盘，系统开始恢复。
+分析总结 本次问题的根本原因是NAS所在的宿主物理机发现宕机，导致虚拟机的NAS服务重启，重启后该应用（nfs）没有设置开机自启动，进而导致了文件存储系统所在的机器连接挂载的存储设备，因此文件存储服务无法读写该设备，造成了IO等待的过高的负载。 最后大家可以看下该文章的分析，我们的情况在他的分析之中。cpu使用率低负载高，原因分析
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+    </section></article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://zhuermu.github.io/" >
+    &copy;  二木的博客 2023 
+  </a>
+    <div>
+<div class="ananke-socials">
+  
+</div>
+</div>
+  </div>
+</footer>
+
+  </body>
+</html>
